@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterStudentActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/ligth_blue"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/txtTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Registrar Curso"
+            android:textSize="25sp"
+            android:layout_marginTop="25dp"
+            android:textStyle="bold"
+            android:textColor="@color/dark_orange"/>
+
+
+        <EditText
+            android:id="@+id/txtNombreCurso"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Nombre del Curso"
+            android:textColorHint="@color/dark_blue"
+            android:background="#70FFDFDF"
+            android:layout_below="@id/txtTitulo"
+            android:padding="13dp"
+            android:layout_marginTop="25dp"
+            android:inputType="text"
+            android:drawableTint="@color/dark_orange"
+            android:drawablePadding="10dp"/>
+
+        <EditText
+            android:id="@+id/txtPrecio"
+            android:layout_width="150dp"
+            android:layout_height="55dp"
+            android:hint="Precio"
+            android:textColorHint="@color/dark_blue"
+            android:background="#70FFDFDF"
+            android:layout_below="@id/txtNombreCurso"
+            android:padding="13dp"
+            android:layout_marginTop="25dp"
+            android:inputType="numberDecimal"
+            android:drawableTint="@color/dark_blue"
+            android:drawablePadding="10dp"
+            android:layout_marginStart="20dp"/>
+
+        <EditText
+            android:id="@+id/txtDuracion"
+            android:layout_width="150dp"
+            android:layout_height="55dp"
+            android:hint="Duracion"
+            android:textColorHint="@color/dark_blue"
+            android:background="#70FFDFDF"
+            android:layout_toEndOf="@id/txtPrecio"
+            android:padding="13dp"
+            android:layout_marginStart="25dp"
+            android:layout_below="@id/txtNombreCurso"
+            android:layout_marginTop="25dp"
+            android:inputType="number"
+            android:drawableTint="@color/dark_blue"
+            android:drawablePadding="10dp"/>
+
+        <Spinner
+            android:id="@+id/spFrecuencias"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_below="@id/txtDuracion"
+            android:layout_marginTop="25dp"
+            android:backgroundTint="@color/dark_orange"
+            android:outlineSpotShadowColor="@color/dark_orange"
+            android:outlineAmbientShadowColor="@color/dark_orange"/>
+
+        <Spinner
+            android:id="@+id/spProfesores"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_below="@id/spFrecuencias"
+            android:layout_marginTop="35dp"
+            android:backgroundTint="@color/dark_orange"
+            android:outlineSpotShadowColor="@color/dark_orange"
+            android:outlineAmbientShadowColor="@color/dark_orange"/>
+
+        <Button
+            android:id="@+id/btnRegistrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Registrar"
+            android:backgroundTint="@color/dark_orange"
+            android:layout_below="@id/spProfesores"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"/>
+
+        <Button
+            android:id="@+id/btnSalir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Salir"
+            android:backgroundTint="@color/red"
+            android:layout_below="@id/btnRegistrar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"/>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

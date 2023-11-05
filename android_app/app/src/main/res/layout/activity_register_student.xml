@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterStudentActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_orange"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/txtTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Registrar Estudiante"
+            android:textSize="25sp"
+            android:layout_marginTop="25dp"
+            android:textStyle="bold"
+            android:textColor="@color/dark_blue"/>
+
+
+        <EditText
+            android:id="@+id/txtNombres"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Nombre"
+            android:textColorHint="@color/dark_blue"
+            android:background="#30427D9D"
+            android:layout_below="@id/txtTitulo"
+            android:padding="13dp"
+            android:layout_marginTop="25dp"
+            android:drawableLeft="@drawable/baseline_person_24"
+            android:inputType="text"
+            android:drawableTint="@color/dark_blue"
+            android:drawablePadding="10dp"/>
+
+        <EditText
+            android:id="@+id/txtApellidoP"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Apellido Paterno"
+            android:textColorHint="@color/dark_blue"
+            android:background="#30427D9D"
+            android:layout_below="@id/txtNombres"
+            android:padding="13dp"
+            android:layout_marginTop="25dp"
+            android:drawableLeft="@drawable/baseline_person_24"
+            android:inputType="text"
+            android:drawableTint="@color/dark_blue"
+            android:drawablePadding="10dp"/>
+
+        <EditText
+            android:id="@+id/txtApellidoM"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Apellido Materno"
+            android:textColorHint="@color/dark_blue"
+            android:background="#30427D9D"
+            android:layout_below="@id/txtApellidoP"
+            android:padding="13dp"
+            android:layout_marginTop="25dp"
+            android:drawableLeft="@drawable/baseline_person_24"
+            android:inputType="text"
+            android:drawableTint="@color/dark_blue"
+            android:drawablePadding="10dp"/>
+
+        <EditText
+            android:id="@+id/txtDni"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="DNI"
+            android:textColorHint="@color/dark_blue"
+            android:background="#30427D9D"
+            android:layout_below="@id/txtApellidoM"
+            android:padding="13dp"
+            android:layout_marginTop="25dp"
+            android:drawableLeft="@drawable/baseline_credit_card_24"
+            android:inputType="text"
+            android:drawableTint="@color/dark_blue"
+            android:drawablePadding="10dp"/>
+
+        <EditText
+            android:id="@+id/txtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Correo Electrónico"
+            android:textColorHint="@color/dark_blue"
+            android:background="#30427D9D"
+            android:layout_below="@id/txtDni"
+            android:padding="13dp"
+            android:layout_marginTop="25dp"
+            android:drawableLeft="@drawable/baseline_alternate_email_24"
+            android:inputType="textEmailAddress"
+            android:drawableTint="@color/dark_blue"
+            android:drawablePadding="10dp"/>
+
+        <EditText
+            android:id="@+id/txtTelefono"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Teléfono"
+            android:textColorHint="@color/dark_blue"
+            android:background="#30427D9D"
+            android:layout_below="@id/txtEmail"
+            android:padding="13dp"
+            android:layout_marginTop="25dp"
+            android:drawableLeft="@drawable/baseline_local_phone_24"
+            android:inputType="number"
+            android:drawableTint="@color/dark_blue"
+            android:drawablePadding="10dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgrpSexo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/txtTelefono"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp">
+
+            <RadioButton
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Masculino"
+                android:outlineSpotShadowColor="@color/dark_blue"
+                android:textColor="@color/dark_blue"
+                android:textStyle="bold"
+                android:layout_marginEnd="15dp"/>
+            <RadioButton
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor="@color/dark_blue"
+                android:textStyle="bold"
+                android:text="Femenino"/>
+
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btnRegistrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Registrar"
+            android:backgroundTint="@color/dark_blue"
+            android:layout_below="@id/rgrpSexo"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="70dp"/>
+
+        <Button
+            android:id="@+id/btnSalir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Salir"
+            android:backgroundTint="@color/red"
+            android:layout_below="@id/rgrpSexo"
+            android:layout_toEndOf="@id/btnRegistrar"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"/>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
