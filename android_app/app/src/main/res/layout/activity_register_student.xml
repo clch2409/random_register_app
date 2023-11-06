@@ -124,6 +124,7 @@
             android:layout_marginTop="25dp">
 
             <RadioButton
+                android:id="@+id/rbMasc"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:text="Masculino"
@@ -132,11 +133,20 @@
                 android:textStyle="bold"
                 android:layout_marginEnd="15dp"/>
             <RadioButton
+                android:id="@+id/rbFem"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:textColor="@color/dark_blue"
                 android:textStyle="bold"
-                android:text="Femenino"/>
+                android:text="Femenino"
+                android:layout_marginEnd="15dp"/>
+            <RadioButton
+                android:id="@+id/rbOtro"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor="@color/dark_blue"
+                android:textStyle="bold"
+                android:text="Otro"/>
 
 
         </RadioGroup>

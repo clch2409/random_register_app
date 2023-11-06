@@ -57,7 +57,7 @@ class RegisterCourseActivity : AppCompatActivity() {
         else{
             val curso = Curso(courseName, coursePrice.toDouble(), courseDuration.toByte(), courseFrecuency.toString(), courseTeacher.toString())
             showMessageSendToMain("Registro de Curso",
-                "DATOS DEL CURSO:" +
+                "¿Desea registrar el curso con estos datos?:" +
                         "\n" +
                         "\t-Nombre: ${curso.nombre}" +
                         "\n" +
