@@ -38,7 +38,7 @@ public class AlumnoController {
     }
 
     @PostMapping
-    public ResponseEntity<?> add(@RequestBody AlumnoEntity a, @PathParam("id_curso") Long idCurso){
+    public ResponseEntity<?> add(@RequestBody AlumnoEntity a, @RequestParam("id_curso") Long idCurso){
         List<CursoEntity> listaCursos = new ArrayList<>();
         boolean cursoPresente = cursoService.findById(idCurso).isPresent();
         if(cursoPresente){
