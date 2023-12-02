@@ -4,8 +4,10 @@ import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.BaseAdapter
 import androidx.appcompat.app.AlertDialog
 import com.google.android.material.snackbar.Snackbar
+import pe.com.register.adapter.StudentAdapter
 import pe.com.register.databinding.ActivityRegisterStudentBinding
 import pe.com.register.impl.ImpAlumno
 import pe.com.register.model.Alumno
@@ -14,12 +16,15 @@ class RegisterStudentActivity : AppCompatActivity() {
 
     private val impAlumno = ImpAlumno()
     private lateinit var binding : ActivityRegisterStudentBinding
+    private var listado : MutableList<Alumno> = mutableListOf()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = ActivityRegisterStudentBinding.inflate(layoutInflater)
         binding.btnRegistrar.setOnClickListener{getStudentData()}
         binding.btnSalir.setOnClickListener { goToMain() }
+        binding.btnLimpiar.setOnClickListener { cleanBoxes() }
         setContentView(binding.root)
     }
 
@@ -67,18 +72,29 @@ class RegisterStudentActivity : AppCompatActivity() {
                         "\n" +
                         "\t-Sexo: ${alumno.sexo}"+
                         "\n" +
-                        "\t-Nombre de Usuario (Proximamente): ${impAlumno.crearNombreUsuario(alumno.dni, alumno.nombres, alumno.apellidoPaterno, alumno.apellidoMaterno)}")
+                        "\t-Nombre de Usuario (Proximamente): ${impAlumno.crearNombreUsuario(alumno.dni, alumno.nombres, alumno.apellidoPaterno, alumno.apellidoMaterno)}",
+                alumno)
+
+
         }
     }
 
-    private fun showMessageSendToMain(titulo: String, mensaje : String){
+    private fun addStudent(alumno : Alumno){
+        listado.add(alumno)
+
+        var adapter = StudentAdapter(applicationContext, listado)
+        binding.studentList.adapter = adapter
+    }
+
+    private fun showMessageSendToMain(titulo: String, mensaje : String, alumno : Alumno){
         val mensajeEmergente = AlertDialog.Builder(this)
 
         mensajeEmergente.apply {
             setTitle(titulo)
             setMessage(mensaje)
             setPositiveButton("SI") { _: DialogInterface?, _: Int ->
-                goToMain()
+                addStudent(alumno)
+                cleanBoxes()
             }
             setNegativeButton("NO"){ _: DialogInterface?, _: Int ->
 
@@ -104,5 +120,15 @@ class RegisterStudentActivity : AppCompatActivity() {
             return true
         }
         return false
+    }
+
+    private fun cleanBoxes(){
+        binding.txtNombres.text.clear()
+        binding.txtApellidoP.text.clear()
+        binding.txtApellidoM.text.clear()
+        binding.txtDni.text.clear()
+        binding.txtTelefono.text.clear()
+        binding.txtEmail.text.clear()
+        binding.rgrpSexo.clearCheck()
     }
 }
