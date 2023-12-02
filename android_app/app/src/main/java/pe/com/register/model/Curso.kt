@@ -2,6 +2,7 @@ package pe.com.register.model
 
 class Curso {
 
+    var id : Long = 0L
     var nombre : String = ""
     var precio : Double = 0.0
     var duracion : Byte = 0

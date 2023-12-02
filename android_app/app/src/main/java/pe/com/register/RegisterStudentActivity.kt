@@ -20,11 +20,12 @@ class RegisterStudentActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        /*TODO: AGREGAR UN DIVIDER PARA EL LISTVIEW*/
         binding = ActivityRegisterStudentBinding.inflate(layoutInflater)
         binding.btnRegistrar.setOnClickListener{getStudentData()}
         binding.btnSalir.setOnClickListener { goToMain() }
         binding.btnLimpiar.setOnClickListener { cleanBoxes() }
+
         setContentView(binding.root)
     }
 
@@ -95,7 +96,7 @@ class RegisterStudentActivity : AppCompatActivity() {
             setPositiveButton("SI") { _: DialogInterface?, _: Int ->
                 addStudent(alumno)
                 cleanBoxes()
-            }
+                }
             setNegativeButton("NO"){ _: DialogInterface?, _: Int ->
 
             }

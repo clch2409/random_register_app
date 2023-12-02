@@ -7,6 +7,9 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
 import pe.com.register.R
+import pe.com.register.RegisterStudentActivity
+import pe.com.register.databinding.ActivityRegisterStudentBinding
+import pe.com.register.databinding.StudentListItemBinding
 import pe.com.register.model.Alumno
 
 class StudentAdapter(context : Context?, val listadoAlumnos : List<Alumno>): BaseAdapter() {
@@ -35,10 +38,12 @@ class StudentAdapter(context : Context?, val listadoAlumnos : List<Alumno>): Bas
             val txtNombre = view!!.findViewById<TextView>(R.id.txtNombreAlumno)
             val txtApellido = view!!.findViewById<TextView>(R.id.txtApellidoAlumno)
             val txtDni = view!!.findViewById<TextView>(R.id.txtDniAlumno)
+            val txtEmail = view!!.findViewById<TextView>(R.id.txtEmailAlumno)
 
             txtNombre.text = student.nombres
             txtApellido.text = student.apellidoPaterno
             txtDni.text = student.dni
+            txtEmail.text = student.email
         }
         return view
     }

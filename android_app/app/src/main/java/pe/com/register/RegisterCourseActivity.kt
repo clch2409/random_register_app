@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AlertDialog
 import com.google.android.material.snackbar.Snackbar
+import pe.com.register.adapter.CourseAdapter
 import pe.com.register.databinding.ActivityRegisterCourseBinding
 import pe.com.register.impl.ImpCurso
 import pe.com.register.model.Curso
@@ -15,6 +16,7 @@ class RegisterCourseActivity : AppCompatActivity() {
 
     private val impCurso = ImpCurso()
     private lateinit var binding : ActivityRegisterCourseBinding
+    private var listadoCursos = mutableListOf<Curso>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -22,6 +24,7 @@ class RegisterCourseActivity : AppCompatActivity() {
         initUi()
         binding.btnRegistrar.setOnClickListener { getInformation() }
         binding.btnSalir.setOnClickListener { goToMain() }
+        binding.btnLimpiar.setOnClickListener { cleanBoxes() }
         setContentView(binding.root)
     }
 
@@ -67,18 +70,29 @@ class RegisterCourseActivity : AppCompatActivity() {
                         "\n" +
                         "\t-Frecuencia: ${curso.frecuencia} semanas" +
                         "\n" +
-                        "\t-Docente: ${curso.profesor}")
+                        "\t-Docente: ${curso.profesor}",
+                        curso)
         }
     }
 
-    private fun showMessageSendToMain(titulo: String, mensaje : String){
+    private fun addCourse(curso : Curso){
+        var newId = listadoCursos.size + 1
+        curso.id = newId.toLong()
+        listadoCursos.add(curso)
+
+        var adapter = CourseAdapter(applicationContext, listadoCursos)
+        binding.listViewCursos.adapter = adapter
+    }
+
+    private fun showMessageSendToMain(titulo: String, mensaje : String, curso : Curso){
         val mensajeEmergente = AlertDialog.Builder(this)
 
         mensajeEmergente.apply {
             setTitle(titulo)
             setMessage(mensaje)
             setPositiveButton("SI") { _: DialogInterface?, _: Int ->
-                goToMain()
+                addCourse(curso)
+                cleanBoxes()
             }
             setNegativeButton("NO"){ _: DialogInterface?, _: Int ->
 
@@ -104,5 +118,13 @@ class RegisterCourseActivity : AppCompatActivity() {
             return true
         }
         return false
+    }
+
+    private fun cleanBoxes(){
+        binding.txtNombreCurso.text.clear()
+        binding.txtPrecio.text.clear()
+        binding.txtDuracion.text.clear()
+        binding.spProfesores.setSelection(0)
+        binding.spFrecuencias.setSelection(0)
     }
 }

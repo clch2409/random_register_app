@@ -15,76 +15,76 @@
         app:layout_constraintHorizontal_bias="0">
 
         <TextView
-            android:id="@+id/lblNombreAlumno"
+            android:id="@+id/lblNombreCurso"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nombre: "
+            android:text="Curso: "
             android:textStyle="bold"
             android:layout_margin="10dp"/>
 
 
         <TextView
-            android:id="@+id/txtNombreAlumno"
+            android:id="@+id/txtNombreCurso"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nombre"
+            android:text="Curso"
             android:layout_margin="7dp"
-            android:layout_toEndOf="@+id/lblNombreAlumno"/>
+            android:layout_toEndOf="@+id/lblNombreCurso"/>
 
         <TextView
-            android:id="@+id/lblApellidoAlumno"
+            android:id="@+id/lblDuracionCurso"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Apellido:"
+            android:text="Duracion:"
             android:textStyle="bold"
             android:layout_margin="10dp"
-            android:layout_below="@+id/txtNombreAlumno"/>
+            android:layout_below="@+id/txtNombreCurso"/>
 
         <TextView
-            android:id="@+id/txtApellidoAlumno"
+            android:id="@+id/txtDuracionCurso"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Apellido"
+            android:text="Duracion"
             android:layout_margin="7dp"
-            android:layout_below="@+id/txtNombreAlumno"
-            android:layout_toEndOf="@+id/lblApellidoAlumno"/>
+            android:layout_below="@+id/txtNombreCurso"
+            android:layout_toEndOf="@+id/lblDuracionCurso"/>
 
         <TextView
-            android:id="@+id/lblDniAlumno"
+            android:id="@+id/lblFrecuenciaCurso"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="DNI:"
+            android:text="Frecuencia:"
             android:textStyle="bold"
             android:layout_margin="10dp"
-            android:layout_toEndOf="@+id/txtNombreAlumno"/>
+            android:layout_toEndOf="@+id/txtNombreCurso"/>
 
         <TextView
-            android:id="@+id/txtDniAlumno"
+            android:id="@+id/txtFrecuenciaCurso"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="DNI:"
+            android:text="Frecuencia:"
             android:layout_margin="7dp"
-            android:layout_toEndOf="@+id/lblDniAlumno"/>
+            android:layout_toEndOf="@+id/lblFrecuenciaCurso"/>
 
         <TextView
-            android:id="@+id/lblEmailAlumno"
+            android:id="@+id/lblProfesorCurso"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Email:"
+            android:text="Profesor:"
             android:textStyle="bold"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="5dp"
-            android:layout_below="@id/lblDniAlumno"
-            android:layout_toEndOf="@+id/txtApellidoAlumno"/>
+            android:layout_below="@id/lblFrecuenciaCurso"
+            android:layout_toEndOf="@+id/txtDuracionCurso"/>
 
         <TextView
-            android:id="@+id/txtEmailAlumno"
+            android:id="@+id/txtProfesorCurso"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Email"
-            android:layout_margin="7dp"
-            android:layout_below="@id/txtDniAlumno"
-            android:layout_toEndOf="@+id/lblEmailAlumno"/>
+            android:text="Profesor"
+            android:layout_margin="10dp"
+            android:layout_below="@id/txtFrecuenciaCurso"
+            android:layout_toEndOf="@+id/lblProfesorCurso"/>
 
     </RelativeLayout>
 
