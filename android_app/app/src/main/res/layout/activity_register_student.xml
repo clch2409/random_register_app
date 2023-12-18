@@ -114,14 +114,21 @@
             android:drawableTint="@color/dark_blue"
             android:drawablePadding="10dp"/>
 
+        <Spinner
+            android:id="@+id/spCursos"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_below="@id/txtTelefono"
+            android:layout_marginTop="20dp"/>
+
         <RadioGroup
             android:id="@+id/rgrpSexo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_below="@+id/txtTelefono"
+            android:layout_below="@+id/spCursos"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="25dp">
+            android:layout_marginTop="20dp">
 
             <RadioButton
                 android:id="@+id/rbMasc"

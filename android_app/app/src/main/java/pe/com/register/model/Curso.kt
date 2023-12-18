@@ -1,12 +1,27 @@
 package pe.com.register.model
 
+import com.google.gson.annotations.Expose
+import com.google.gson.annotations.SerializedName
+
 class Curso {
 
-    var id : Long = 0L
+    @SerializedName("idCurso")
+    @Expose
+    var idCurso : Long = 0L
+    @SerializedName("nombre")
+    @Expose
     var nombre : String = ""
+    @SerializedName("precio")
+    @Expose
     var precio : Double = 0.0
+    @SerializedName("duracion")
+    @Expose
     var duracion : Byte = 0
+    @SerializedName("frecuencia")
+    @Expose
     var frecuencia : String = ""
+    @SerializedName("profesor")
+    @Expose
     var profesor : String = ""
 
     constructor()

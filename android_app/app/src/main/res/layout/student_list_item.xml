@@ -67,10 +67,10 @@
             android:layout_toEndOf="@+id/lblDniAlumno"/>
 
         <TextView
-            android:id="@+id/lblEmailAlumno"
+            android:id="@+id/lblSexoAlumno"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Email:"
+            android:text="Sexo:"
             android:textStyle="bold"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="5dp"
@@ -78,13 +78,13 @@
             android:layout_toEndOf="@+id/txtApellidoAlumno"/>
 
         <TextView
-            android:id="@+id/txtEmailAlumno"
+            android:id="@+id/txtSexoAlumno"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Email"
+            android:text="Sexo"
             android:layout_margin="7dp"
             android:layout_below="@id/txtDniAlumno"
-            android:layout_toEndOf="@+id/lblEmailAlumno"/>
+            android:layout_toEndOf="@+id/lblSexoAlumno"/>
 
     </RelativeLayout>
 

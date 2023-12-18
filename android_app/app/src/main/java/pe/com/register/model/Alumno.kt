@@ -1,32 +1,50 @@
 package pe.com.register.model
 
+import com.google.gson.annotations.Expose
+import com.google.gson.annotations.SerializedName
+
 class Alumno {
 
+    @SerializedName("idAlumno")
+    @Expose
+    var idAlumno = 0L
+    @SerializedName("nombres")
+    @Expose
     var nombres = ""
-    var apellidoPaterno = ""
-    var apellidoMaterno = ""
+    @SerializedName("apellidos")
+    @Expose
+    var apellidos = ""
+    @SerializedName("dni")
+    @Expose
     var dni = ""
+    @SerializedName("telefono")
+    @Expose
     var telefono = ""
-    var email = ""
+    @SerializedName("genero")
+    @Expose
     var sexo = ""
+    @SerializedName("activo")
+    @Expose
+    var activo = true
 
     constructor()
-
     constructor(
+        idAlumno: Long,
         nombres: String,
-        apellidoPaterno: String,
-        apellidoMaterno: String,
+        apellidos: String,
         dni: String,
-        email : String,
         telefono: String,
-        sexo: String
+        sexo: String,
+        activo: Boolean
     ) {
+        this.idAlumno = idAlumno
         this.nombres = nombres
-        this.apellidoPaterno = apellidoPaterno
-        this.apellidoMaterno = apellidoMaterno
+        this.apellidos = apellidos
         this.dni = dni
-        this.email = email
         this.telefono = telefono
         this.sexo = sexo
+        this.activo = activo
     }
+
+
 }

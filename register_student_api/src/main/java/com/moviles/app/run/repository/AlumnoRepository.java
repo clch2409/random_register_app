@@ -7,6 +7,6 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.List;
 
 public interface AlumnoRepository extends CrudRepository<AlumnoEntity,Long> {
-    @Query(value = "SELECT a FROM Alumno a WHERE a.activo=false")
+    @Query(value = "SELECT a FROM Alumno a WHERE a.activo=true")
     List<AlumnoEntity> findAllByActivo();
 }

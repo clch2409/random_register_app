@@ -12,18 +12,18 @@ import pe.com.register.databinding.ActivityRegisterStudentBinding
 import pe.com.register.databinding.StudentListItemBinding
 import pe.com.register.model.Alumno
 
-class StudentAdapter(context : Context?, val listadoAlumnos : List<Alumno>): BaseAdapter() {
+class StudentAdapter(context : Context?, val listadoAlumnos : List<Alumno>?): BaseAdapter() {
 
     private var layoutInflater : LayoutInflater
     init{
         layoutInflater = LayoutInflater.from(context)
     }
     override fun getCount(): Int {
-        return listadoAlumnos.size
+        return listadoAlumnos!!.size
     }
 
     override fun getItem(position: Int): Any {
-        return listadoAlumnos[position]
+        return listadoAlumnos!![position]
     }
 
     override fun getItemId(position: Int): Long {
@@ -38,12 +38,12 @@ class StudentAdapter(context : Context?, val listadoAlumnos : List<Alumno>): Bas
             val txtNombre = view!!.findViewById<TextView>(R.id.txtNombreAlumno)
             val txtApellido = view!!.findViewById<TextView>(R.id.txtApellidoAlumno)
             val txtDni = view!!.findViewById<TextView>(R.id.txtDniAlumno)
-            val txtEmail = view!!.findViewById<TextView>(R.id.txtEmailAlumno)
+            val txtSexo = view!!.findViewById<TextView>(R.id.txtSexoAlumno)
 
             txtNombre.text = student.nombres
-            txtApellido.text = student.apellidoPaterno
+            txtApellido.text = student.apellidos
             txtDni.text = student.dni
-            txtEmail.text = student.email
+            txtSexo.text = student.sexo
         }
         return view
     }

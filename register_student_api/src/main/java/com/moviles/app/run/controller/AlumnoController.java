@@ -27,8 +27,8 @@ public class AlumnoController {
         return new ResponseEntity<>(service.findAll(), HttpStatus.OK);
     }
 
-    @GetMapping("/inactivos")
-    public ResponseEntity<?> findInactives(){
+    @GetMapping("/activos")
+    public ResponseEntity<?> findActives(){
         return new ResponseEntity<>(service.findAllByActivo(),HttpStatus.OK);
     }
 

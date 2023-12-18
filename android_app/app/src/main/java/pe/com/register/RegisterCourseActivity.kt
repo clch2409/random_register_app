@@ -77,7 +77,7 @@ class RegisterCourseActivity : AppCompatActivity() {
 
     private fun addCourse(curso : Curso){
         var newId = listadoCursos.size + 1
-        curso.id = newId.toLong()
+        curso.idCurso = newId.toLong()
         listadoCursos.add(curso)
 
         var adapter = CourseAdapter(applicationContext, listadoCursos)
