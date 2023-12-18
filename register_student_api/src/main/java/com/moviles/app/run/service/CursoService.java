@@ -7,7 +7,7 @@ import java.util.Optional;
 
 public interface CursoService {
     List<CursoEntity> findAll();
-    List<CursoEntity> findAllByActivo();
+    List<CursoEntity> findAllByActivo(boolean activo);
     Optional<CursoEntity> findById(Long id);
     CursoEntity add(CursoEntity c);
     CursoEntity update(CursoEntity c);

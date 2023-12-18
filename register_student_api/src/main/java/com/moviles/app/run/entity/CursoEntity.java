@@ -20,6 +20,15 @@ public class CursoEntity implements Serializable {
     private Long idCurso;
     @Column(length = 100)
     private String nombre;
+    @Column(length = 100)
+    private String profesor;
+    @Column
+    private Byte duracion;
+    @Column(length = 80)
+    private String frecuencia;
+    @Column
+    private Double precio;
+    @Column
     private boolean activo;
 
     @JsonIgnore

@@ -20,7 +20,7 @@ public class CursoController {
     }
     @GetMapping("/inactivos")
     public ResponseEntity<?> findInactives(){
-        return new ResponseEntity<>(service.findAllByActivo(), HttpStatus.OK);
+        return new ResponseEntity<>(service.findAllByActivo(false), HttpStatus.OK);
     }
 
     @GetMapping("/{id}")

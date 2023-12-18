@@ -20,8 +20,8 @@ public class CursoServiceImpl implements CursoService {
     }
 
     @Override
-    public List<CursoEntity> findAllByActivo() {
-        return repository.findAllByActivo();
+    public List<CursoEntity> findAllByActivo(boolean activo) {
+        return repository.findAllByActivo(activo);
     }
 
     @Override
@@ -31,6 +31,7 @@ public class CursoServiceImpl implements CursoService {
 
     @Override
     public CursoEntity add(CursoEntity c) {
+        c.setIdCurso(0L);
         return repository.save(c);
     }
 
