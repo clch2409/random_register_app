@@ -7,7 +7,7 @@ import java.util.Optional;
 
 public interface AlumnoService {
     List<AlumnoEntity> findAll();
-    List<AlumnoEntity> findAllByActivo();
+    List<AlumnoEntity> findAllByActivo(boolean activo);
     Optional<AlumnoEntity> findById(Long id);
     AlumnoEntity add(AlumnoEntity a);
     AlumnoEntity update(AlumnoEntity a);
