@@ -21,11 +21,11 @@ interface CursoService {
     suspend fun buscarPorId(@Path("id") id : Long) : Response<Curso?>?
 
     @POST("curso")
-    suspend fun agregarCurso(@Body curso : Curso) : Response<Curso?>?
+    suspend fun agregarCurso(@Body curso : Curso) : Response<Curso>?
 
     @PUT("curso/{id}")
-    suspend fun actualizarCurso(@Path("id") id : Long) : Response<Curso?>?
+    suspend fun actualizarCurso(@Path("id") id : Long,@Body curso : Curso) : Response<Curso>?
 
     @DELETE("curso/{id}")
-    suspend fun eliminarCurso(@Path("id") id : Long) : Response<Curso?>?
+    suspend fun eliminarCurso(@Path("id") id : Long) : Response<Curso>?
 }

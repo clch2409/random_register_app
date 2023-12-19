@@ -35,10 +35,13 @@
             android:id="@+id/lblDuracionCurso"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/txtNombreCurso"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
             android:text="Duracion:"
-            android:textStyle="bold"
-            android:layout_margin="10dp"
-            android:layout_below="@+id/txtNombreCurso"/>
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/txtDuracionCurso"
@@ -56,7 +59,7 @@
             android:text="Frecuencia:"
             android:textStyle="bold"
             android:layout_margin="10dp"
-            android:layout_toEndOf="@+id/txtNombreCurso"/>
+            android:layout_below="@id/lblDuracionCurso"/>
 
         <TextView
             android:id="@+id/txtFrecuenciaCurso"
@@ -64,6 +67,7 @@
             android:layout_height="wrap_content"
             android:text="Frecuencia:"
             android:layout_margin="7dp"
+            android:layout_below="@id/lblDuracionCurso"
             android:layout_toEndOf="@+id/lblFrecuenciaCurso"/>
 
         <TextView
@@ -74,8 +78,7 @@
             android:textStyle="bold"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="5dp"
-            android:layout_below="@id/lblFrecuenciaCurso"
-            android:layout_toEndOf="@+id/txtDuracionCurso"/>
+            android:layout_below="@id/lblFrecuenciaCurso"/>
 
         <TextView
             android:id="@+id/txtProfesorCurso"
@@ -84,7 +87,26 @@
             android:text="Profesor"
             android:layout_margin="10dp"
             android:layout_below="@id/txtFrecuenciaCurso"
-            android:layout_toEndOf="@+id/lblProfesorCurso"/>
+            android:layout_toEndOf="@id/lblProfesorCurso"/>
+
+        <TextView
+            android:id="@+id/lblEstadoCurso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Estado:"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@id/txtNombreCurso"/>
+
+        <TextView
+            android:id="@+id/txtEstadoCurso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Estado"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@id/lblEstadoCurso"/>
 
     </RelativeLayout>
 

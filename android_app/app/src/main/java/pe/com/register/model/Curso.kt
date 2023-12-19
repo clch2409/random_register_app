@@ -23,13 +23,17 @@ class Curso {
     @SerializedName("profesor")
     @Expose
     var profesor : String = ""
+    @SerializedName("activo")
+    @Expose
+    var activo : Boolean = false
 
     constructor()
-    constructor(nombre: String, precio: Double, duracion: Byte, frecuencia : String, profesor: String) {
+    constructor(nombre: String, precio: Double, duracion: Byte, frecuencia : String, profesor: String, activo : Boolean) {
         this.nombre = nombre
         this.precio = precio
         this.duracion = duracion
         this.frecuencia = frecuencia
         this.profesor = profesor
+        this.activo = activo
     }
 }

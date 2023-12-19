@@ -7,9 +7,8 @@ class ImpCurso : ICurso {
         val frecuencias : MutableList<String> = mutableListOf<String>()
         frecuencias.add("Seleccione la frecuencia del curso:")
         frecuencias.add("Diario")
-        frecuencias.add("Interdiario L-M-V")
-        frecuencias.add("Interdiario J-V")
-        frecuencias.add("Sábados y Domingos")
+        frecuencias.add("Interdiario")
+        frecuencias.add("Sabados - Domingos")
         return frecuencias
     }
 

@@ -7,11 +7,13 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
 import pe.com.register.R
+import pe.com.register.databinding.CourseListItemBinding
 import pe.com.register.model.Curso
 
-class CourseAdapter(context : Context?, var listadoCursos : List<Curso>) : BaseAdapter() {
+class CourseAdapter(context : Context?, private var listadoCursos : List<Curso>) : BaseAdapter() {
 
     private var layoutInflater : LayoutInflater
+    private lateinit var binding : CourseListItemBinding
     init{
         layoutInflater = LayoutInflater.from(context)
     }
@@ -37,11 +39,13 @@ class CourseAdapter(context : Context?, var listadoCursos : List<Curso>) : BaseA
             var txtDuracion = view!!.findViewById<TextView>(R.id.txtDuracionCurso)
             var txtProfesor = view!!.findViewById<TextView>(R.id.txtProfesorCurso)
             var txtFrecuencia = view!!.findViewById<TextView>(R.id.txtFrecuenciaCurso)
+            var txtEstado = view!!.findViewById<TextView>(R.id.txtEstadoCurso)
 
             txtCurso.text = curso.nombre
             txtDuracion.text = "${curso.duracion} semanas"
             txtProfesor.text = curso.profesor
             txtFrecuencia.text = "${curso.frecuencia}"
+            txtEstado.text = if (curso.activo) "Activo" else "Inactivo"
         }
         return view
     }

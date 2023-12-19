@@ -80,7 +80,7 @@
 
         <Spinner
             android:id="@+id/spProfesores"
-            android:layout_width="match_parent"
+            android:layout_width="250dp"
             android:layout_height="55dp"
             android:layout_below="@id/spFrecuencias"
             android:layout_marginTop="15dp"
@@ -88,15 +88,48 @@
             android:outlineSpotShadowColor="@color/dark_orange"
             android:outlineAmbientShadowColor="@color/dark_orange"/>
 
+        <CheckBox
+            android:id="@+id/chkEstadoCurso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Activo"
+            android:textColor="@color/dark_orange"
+            android:textStyle="bold"
+            android:layout_below="@id/spFrecuencias"
+            android:layout_toEndOf="@id/spProfesores"
+            android:layout_marginTop="15dp"/>
+
         <Button
             android:id="@+id/btnRegistrar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Registrar"
-            android:backgroundTint="@color/dark_orange"
+            android:backgroundTint="@color/dark_blue"
             android:layout_below="@id/spProfesores"
-            android:layout_toStartOf="@id/btnLimpiar"
+            android:layout_toStartOf="@id/btnActualizar"
             android:layout_marginRight="10dp"
+            android:layout_marginTop="25dp"/>
+
+        <Button
+            android:id="@+id/btnActualizar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Actualizar"
+            android:backgroundTint="@color/spotify_green"
+            android:layout_below="@id/spProfesores"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"/>
+
+        <Button
+            android:id="@+id/btnEliminar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Eliminar"
+            android:backgroundTint="@color/red"
+            android:layout_below="@id/spProfesores"
+            android:layout_toEndOf="@id/btnActualizar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="25dp"/>
 
         <Button
@@ -104,9 +137,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Limpiar"
-            android:backgroundTint="@color/dark_blue"
-            android:layout_below="@id/spProfesores"
-            android:layout_centerHorizontal="true"
+            android:backgroundTint="@color/dark_orange"
+            android:layout_below="@id/btnRegistrar"
+            android:layout_marginLeft="100dp"
             android:layout_marginTop="25dp"/>
 
         <Button
@@ -114,8 +147,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Salir"
-            android:backgroundTint="@color/red"
-            android:layout_below="@id/spProfesores"
+            android:backgroundTint="@color/another_red"
+            android:layout_below="@id/btnActualizar"
             android:layout_toEndOf="@id/btnLimpiar"
             android:layout_centerHorizontal="true"
             android:layout_marginLeft="10dp"
@@ -126,6 +159,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/btnLimpiar"
+            tools:listitem="@layout/course_list_item"
             android:layout_marginTop="15dp"
             android:listSelector="@color/ligth_beige"/>
 
