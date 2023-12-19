@@ -39,11 +39,13 @@ class StudentAdapter(context : Context?, val listadoAlumnos : List<Alumno>?): Ba
             val txtApellido = view!!.findViewById<TextView>(R.id.txtApellidoAlumno)
             val txtDni = view!!.findViewById<TextView>(R.id.txtDniAlumno)
             val txtSexo = view!!.findViewById<TextView>(R.id.txtSexoAlumno)
+            val txtEstado = view!!.findViewById<TextView>(R.id.txtEstadoAlumno)
 
             txtNombre.text = student.nombres
             txtApellido.text = student.apellidos
             txtDni.text = student.dni
             txtSexo.text = student.sexo
+            txtEstado.text = if (student.activo) "Activo" else "Inactivo"
         }
         return view
     }

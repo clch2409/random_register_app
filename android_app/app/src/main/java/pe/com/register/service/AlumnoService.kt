@@ -27,7 +27,7 @@ interface AlumnoService {
     suspend fun agregarAlumno(@Body alumno : Alumno, @Query("id_curso") idCurso : Long) : Response<Alumno>?
 
     @PUT("alumno/{id}")
-    suspend fun actualizarAlumno(@Path("id") id : Long) : Response<Alumno?>?
+    suspend fun actualizarAlumno(@Path("id") id : Long, @Body alumno : Alumno) : Response<Alumno?>?
 
     @DELETE("alumno/{id}")
     suspend fun eliminarAlumno(@Path("id") id : Long) : Response<Alumno?>?

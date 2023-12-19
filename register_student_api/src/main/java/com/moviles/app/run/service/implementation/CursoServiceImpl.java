@@ -20,8 +20,8 @@ public class CursoServiceImpl implements CursoService {
     }
 
     @Override
-    public List<CursoEntity> findAllByActivo(boolean activo) {
-        return repository.findAllByActivo(activo);
+    public List<CursoEntity> findAllByActivo() {
+        return repository.findAllByActivo();
     }
 
     @Override

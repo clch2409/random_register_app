@@ -6,5 +6,5 @@ interface IAlumno {
 
     fun validarTelefono(telefono : String): Boolean
 
-    fun crearNombreUsuario(dni: String, nombre : String, apellidoPaterno : String, apellidoMaterno : String) : String
+    fun crearNombreUsuario(dni: String, nombre : String, apellidos : String) : String
 }

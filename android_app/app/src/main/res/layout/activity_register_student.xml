@@ -6,11 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".RegisterStudentActivity">
 
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/light_orange"
-        android:padding="15dp">
+        android:padding="10dp">
 
         <TextView
             android:id="@+id/txtTitulo"
@@ -28,7 +29,7 @@
             android:id="@+id/txtNombres"
             android:layout_width="match_parent"
             android:layout_height="45dp"
-            android:hint="Nombre"
+            android:hint="Nombres"
             android:textColorHint="@color/dark_blue"
             android:background="#30427D9D"
             android:layout_below="@id/txtTitulo"
@@ -40,10 +41,10 @@
             android:drawablePadding="10dp"/>
 
         <EditText
-            android:id="@+id/txtApellidoP"
+            android:id="@+id/txtApellidos"
             android:layout_width="match_parent"
             android:layout_height="45dp"
-            android:hint="Apellido Paterno"
+            android:hint="Apellidos"
             android:textColorHint="@color/dark_blue"
             android:background="#30427D9D"
             android:layout_below="@id/txtNombres"
@@ -55,28 +56,13 @@
             android:drawablePadding="10dp"/>
 
         <EditText
-            android:id="@+id/txtApellidoM"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:hint="Apellido Materno"
-            android:textColorHint="@color/dark_blue"
-            android:background="#30427D9D"
-            android:layout_below="@id/txtApellidoP"
-            android:padding="13dp"
-            android:layout_marginTop="15dp"
-            android:drawableLeft="@drawable/baseline_person_24"
-            android:inputType="text"
-            android:drawableTint="@color/dark_blue"
-            android:drawablePadding="10dp"/>
-
-        <EditText
             android:id="@+id/txtDni"
-            android:layout_width="match_parent"
+            android:layout_width="185dp"
             android:layout_height="45dp"
             android:hint="DNI"
             android:textColorHint="@color/dark_blue"
             android:background="#30427D9D"
-            android:layout_below="@id/txtApellidoM"
+            android:layout_below="@id/txtApellidos"
             android:padding="13dp"
             android:layout_marginTop="15dp"
             android:drawableLeft="@drawable/baseline_credit_card_24"
@@ -85,40 +71,41 @@
             android:drawablePadding="10dp"/>
 
         <EditText
-            android:id="@+id/txtEmail"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:hint="Correo Electrónico"
-            android:textColorHint="@color/dark_blue"
-            android:background="#30427D9D"
-            android:layout_below="@id/txtDni"
-            android:padding="13dp"
-            android:layout_marginTop="15dp"
-            android:drawableLeft="@drawable/baseline_alternate_email_24"
-            android:inputType="textEmailAddress"
-            android:drawableTint="@color/dark_blue"
-            android:drawablePadding="10dp"/>
-
-        <EditText
             android:id="@+id/txtTelefono"
-            android:layout_width="match_parent"
+            android:layout_width="185dp"
             android:layout_height="45dp"
             android:hint="Teléfono"
             android:textColorHint="@color/dark_blue"
             android:background="#30427D9D"
-            android:layout_below="@id/txtEmail"
+            android:layout_below="@id/txtApellidos"
+            android:layout_toEndOf="@id/txtDni"
             android:padding="13dp"
             android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
             android:drawableLeft="@drawable/baseline_local_phone_24"
             android:inputType="number"
             android:drawableTint="@color/dark_blue"
             android:drawablePadding="10dp"/>
 
+        <CheckBox
+            android:id="@+id/chkActivo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/dark_blue"
+            android:textStyle="bold"
+            android:text="Activo"
+            android:layout_below="@id/txtDni"
+            android:layout_toEndOf="@id/spCursos"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"/>
+
+
         <Spinner
             android:id="@+id/spCursos"
-            android:layout_width="match_parent"
+            android:layout_width="220dp"
             android:layout_height="55dp"
-            android:layout_below="@id/txtTelefono"
+            android:layout_below="@id/txtDni"
             android:layout_marginTop="20dp"/>
 
         <RadioGroup
@@ -169,13 +156,24 @@
             android:layout_marginStart="30dp"/>
 
         <Button
-            android:id="@+id/btnSalir"
+            android:id="@+id/btnActualizar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Salir"
-            android:backgroundTint="@color/red"
+            android:text="Actualizar"
+            android:backgroundTint="@color/spotify_green"
             android:layout_below="@id/rgrpSexo"
             android:layout_toEndOf="@id/btnRegistrar"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="10dp"/>
+
+        <Button
+            android:id="@+id/btnEliminar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Eliminar"
+            android:backgroundTint="@color/red"
+            android:layout_below="@id/rgrpSexo"
+            android:layout_toEndOf="@id/btnActualizar"
             android:layout_marginStart="10dp"
             android:layout_marginTop="15dp"/>
 
@@ -185,8 +183,18 @@
             android:layout_height="wrap_content"
             android:text="Limpiar"
             android:backgroundTint="@color/dark_orange"
-            android:layout_below="@id/rgrpSexo"
-            android:layout_toEndOf="@id/btnSalir"
+            android:layout_below="@id/btnEliminar"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="15dp"/>
+
+        <Button
+            android:id="@+id/btnSalir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Salir"
+            android:backgroundTint="@color/another_red"
+            android:layout_below="@id/btnEliminar"
+            android:layout_toEndOf="@id/btnLimpiar"
             android:layout_marginStart="10dp"
             android:layout_marginTop="15dp"/>
 
@@ -194,7 +202,7 @@
             android:id="@+id/studentList"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/btnRegistrar"
+            android:layout_below="@+id/btnLimpiar"
             tools:listitem="@layout/student_list_item"
             android:listSelector="@color/ligth_blue"
             android:layout_marginTop="15dp"/>

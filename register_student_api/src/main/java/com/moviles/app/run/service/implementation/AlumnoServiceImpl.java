@@ -20,8 +20,8 @@ public class AlumnoServiceImpl implements AlumnoService {
     }
 
     @Override
-    public List<AlumnoEntity> findAllByActivo(boolean activo) {
-        return repository.findAllByActivo(activo);
+    public List<AlumnoEntity> findAllByActivo() {
+        return repository.findAllByActivo();
     }
 
     @Override

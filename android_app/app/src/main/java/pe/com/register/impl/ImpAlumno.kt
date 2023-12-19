@@ -14,10 +14,9 @@ class ImpAlumno : IAlumno{
     override fun crearNombreUsuario(
         dni: String,
         nombre : String,
-        apellidoPaterno: String,
-        apellidoMaterno: String
+        apellidos: String,
     ): String {
-        return "${nombre[0]}${apellidoPaterno[0]}${apellidoMaterno[0]}$dni"
+        return "${nombre[0]}${apellidos[0]}${apellidos[1]}$dni"
     }
 
 
