@@ -16,7 +16,7 @@ class ImpAlumno : IAlumno{
         nombre : String,
         apellidos: String,
     ): String {
-        return "${nombre[0]}${apellidos[0]}${apellidos[1]}$dni"
+        return "${nombre[0]}${apellidos[0]}$dni"
     }
 
 

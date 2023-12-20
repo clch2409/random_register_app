@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         binding.btnMainAlumno.setOnClickListener { sendToStudent() }
         binding.btnMainCurso.setOnClickListener { sendToCourse() }
+        binding.btnRegresar.setOnClickListener { sendToLogin() }
 
 
         setContentView(binding.root)
@@ -28,6 +29,11 @@ class MainActivity : AppCompatActivity() {
     private fun sendToCourse(){
         val intent = Intent(applicationContext, RegisterCourseActivity::class.java)
         startActivity(intent)
+        finish()
+    }
+
+    private fun sendToLogin(){
+        startActivity(Intent(this@MainActivity, LoginActivity::class.java))
         finish()
     }
 }

@@ -2,6 +2,7 @@ package pe.com.register.remote
 
 import pe.com.register.service.AlumnoService
 import pe.com.register.service.CursoService
+import pe.com.register.service.SecurityService
 
 object Api {
 
@@ -13,5 +14,8 @@ object Api {
     val cursoService:CursoService? get() = RetrofitClient
         .getConnection(BASE_URL)
         ?.create(CursoService::class.java)
+
+    val securityService : SecurityService? get()  =
+        RetrofitClient.getConnection(BASE_URL)?.create(SecurityService::class.java)
 
 }
