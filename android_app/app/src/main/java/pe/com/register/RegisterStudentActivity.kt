@@ -190,7 +190,7 @@ class RegisterStudentActivity : AppCompatActivity() {
 
     private fun validateUpdate(alumno : Alumno, idAlumno: Long){
         showMessageAndDoSomething("Actualizar alumno",
-            "EL alumno con ID -> ${alumno.idAlumno}. Tendrá los siguientes datos:" +
+            "EL alumno: -> ${alumno.nombres} ${alumno.apellidos}. Tendrá los siguientes datos:" +
                     "\n" +
                     "\t-Nombres: ${alumno.nombres}"+
                     "\n" +

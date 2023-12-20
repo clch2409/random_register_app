@@ -191,7 +191,7 @@ class RegisterCourseActivity : AppCompatActivity() {
 
     private fun validateUpdate(curso : Curso, funcion : Int, idCurso : Long){
         showMessageAndDoSomething("Actualizar de Curso",
-            "¿Dese actualizar el curso con ID -> $idCurso?:" +
+            "¿Dese actualizar el curso -> ${curso.nombre}?:" +
                     "\n" +
                     "\t-Nombre: ${curso.nombre}" +
                     "\n" +
@@ -288,5 +288,6 @@ class RegisterCourseActivity : AppCompatActivity() {
         binding.spProfesores.setSelection(0)
         binding.spFrecuencias.setSelection(0)
         binding.chkEstadoCurso.isChecked = false
+        posicion = -1
     }
 }
